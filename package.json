@@ -1,0 +1,19 @@
+{
+  "name": "placestraveledapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacief510/PlacesTraveledAPI.git"
+  },
+  "author": "Stacie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stacief510/PlacesTraveledAPI/issues"
+  },
+  "homepage": "https://github.com/stacief510/PlacesTraveledAPI#readme"
+}

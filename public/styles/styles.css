@@ -1,0 +1,16 @@
+.jumbotron{
+	background-image: url("../images/greece1.jpg");
+	background-size:100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	height:350px;
+}
+.container{
+	margin:0 30px;
+}
+.jumbotron p{
+	font-weight: 400;
+}
+body{
+	background-color: #B7D6FE;
+}

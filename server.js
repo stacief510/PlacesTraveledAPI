@@ -19,6 +19,8 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/places', controllers.places.index);
 
+app.post('/api/places', controllers.places.create);
+
 // app.get('/api/places' controllers.places.create);
 
 app.get('/api/profile', function(req, res) {

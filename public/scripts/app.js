@@ -13,6 +13,7 @@ $('#place-form').on('submit', function(event){
 	var formData = $(this).serialize();
 	console.log(formData);
 	this.reset();
+	
 	$.ajax({
 		method:'POST',
 		url: "/api/places",
@@ -35,7 +36,7 @@ $('#place-form').on('submit', function(event){
   }
 
 function postSuccess(place){
-	renderCountry(createdPlace);
+	renderCountry(place);
 }
 
 // var placeList = [{
@@ -86,12 +87,6 @@ function renderCountry(place){
 	                        </li>
 	                      </ul>
 	                    </div>
-
-	                  </div>
-		              <div class='footer'>
-		                  <button class='btn btn-primary add-place'>Add Destination</button>
-		              </div>
-	                </div>
 
 	              </div>
 

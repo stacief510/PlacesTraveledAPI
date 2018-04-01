@@ -34,7 +34,13 @@ function index(req, res) {
 function create(req, res) {
   // create a place based on request body and send it back as JSON
   console.log(req.body);
-  
+  db.Place.create(req.body, function(err, place){
+    if (err){
+      res.status(500).send(err);
+            return;
+    }
+    res.json(place);
+  });
 }
 
 // GET /api/places/:placeId

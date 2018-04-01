@@ -21,11 +21,10 @@ var db = require("../models");
 // GET /api/places
 function index(req, res) {
   // send back all places as JSON
-  db.Place.find({})
-            .exec(function(err, place){
+  db.Place.find({}, function(err, place){
+            
               if (err){
-                res.status(500).send(err);
-                return;
+                return console.log('failed because you suck.');
               }
               res.json(place);
               });
@@ -34,7 +33,8 @@ function index(req, res) {
 // POST /api/places
 function create(req, res) {
   // create a place based on request body and send it back as JSON
-  // res.json(req.body);
+  console.log(req.body);
+  
 }
 
 // GET /api/places/:placeId

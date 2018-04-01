@@ -1,8 +1,8 @@
 //seed.js 
 var db = require("./models");
 
-var placeList = [{
-  photo:"./images/Paris.jpeg",
+var real_place = [{
+  photo:"./images/Paris.jpg",
   country: 'France',
   dateVisited: 'July 2003',
   notes:"Visited Paris, Provence, Nice, and Cassis."
@@ -29,13 +29,21 @@ var placeList = [{
   notes:"Visited Mykonos, Santorini, Athens."
 }];
 
-db.Place.destroy({}, function(err, place){
-  // code in here runs after all places are removed
-  db.Place.create(placeList, function(err, place){
+db.Place.remove({}, function(err, place){
+	// code in here runs after all places are removed
+	 //  if (err) {
+  //   console.log(`failed to remove all places in db: err = ${err}`);
+  //   return;
+  // }
+  // console.log("successfully wiped out everything in the db");
+  
+  db.Place.create(real_place, function(err, place){
     // code in here runs after all places are created
-    if (err) { return console.log('ERROR', err); }
-    console.log("place:", place);
-    console.log("created", place.length, "place");
+    if (err) { 
+    	return console.log('failed to create a place', err); 
+    }
+    console.log("successfully created place", place);
+    console.log('created', place.length, 'places');
     process.exit();
   });
 });

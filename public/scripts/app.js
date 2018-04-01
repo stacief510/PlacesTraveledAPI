@@ -8,6 +8,20 @@ $.ajax({
 	error: handleError
 });
 
+$('#place-form').on('submit', function(event){
+	event.preventDefault();
+	var formData = $(this).serialize();
+	console.log(formData);
+	this.reset();
+	$.ajax({
+		method:'POST',
+		url: "/api/places",
+		data: formData,
+		success: postSuccess,
+		error: handleError
+	});
+});
+
 
 }); //doc ready ending. DONT DELETE
 
@@ -20,6 +34,9 @@ $.ajax({
     console.log('There is an error', + err); 
   }
 
+function postSuccess(place){
+	renderCountry(createdPlace);
+}
 
 // var placeList = [{
 //   _id:132,

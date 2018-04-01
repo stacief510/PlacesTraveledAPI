@@ -2,15 +2,39 @@
 //inside here put var placeList =[{ _id: x, country:x, datesVisited:x}] as hard coded place data for now
 var db = require("../models");
 
+// var placeList = [{
+//   _id:132,
+//   photo:"./images/Barcelona.jpg",
+//   country: 'Spain',
+//   dateVisited: 'July 2003',
+//   notes:"Visited Barcelona."
+// },
+// {
+//   _id:133,
+//   photo:"./images/Paris.jpeg",
+//   country: 'France',
+//   dateVisited: 'July 2003',
+//   notes:"Visited Paris, Provence, Nice, and Cassis."
+// }];
+
 
 // GET /api/places
 function index(req, res) {
   // send back all places as JSON
+  db.Place.find({})
+            .exec(function(err, place){
+              if (err){
+                res.status(500).send(err);
+                return;
+              }
+              res.json(place);
+              });
 }
 
 // POST /api/places
 function create(req, res) {
   // create a place based on request body and send it back as JSON
+  // res.json(req.body);
 }
 
 // GET /api/places/:placeId

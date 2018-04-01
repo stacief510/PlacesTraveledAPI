@@ -27,9 +27,72 @@
 		<div class="jumbotron jumbotron-fluid">
   			<div class="container">
    				 <h1 class="display-4">Stacie's European Vacations</h1>
-   				 <p class="lead">An app to track the countries I've visited in Europe.</p>
+   				 <p class="lead">An app to track countries I've visited in Europe.</p>
 		  	</div>
 		</div>
 	</header>
+<!-- SEARCH FIELD START -->
+ <section  class="container">
+      <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <form id='place-form' class="form-horizontal">
+          <fieldset>
+<!-- SEARCH INPUT NAME -->
+	<legend>Add a Country</legend>
+			<!-- Text input -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Country Name:</label>
+              <div class="col-md-4">
+              <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required>
+              </div>
+            </div>
+
+           <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="datesVisited">Dates Visited:</label>
+              <div class="col-md-4">
+              <input id="textinput" name="datesVisited" type="text" placeholder="" class="form-control input-md" required>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="photo">Photo:</label>
+              <div class="col-md-4">
+              <input name="photo" type="text" class="form-control input-md" required>
+              </div>
+            </div>
+      
+      		<!-- SUBMIT Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submitButton">Submit to Save Destination</label>
+              <div class="col-md-4">
+                <button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      </div>
+<!-- SEARCH FIELD END -->
+<!-- country fields populate here  -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Countries</h2>
+        </div>
+      </div>
+      <!-- countries -->
+		<div id=countries>
+		</div>
+	</section>
 </body>
 </html>
+
+
+
+
+
+
+

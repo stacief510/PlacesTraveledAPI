@@ -1,4 +1,5 @@
-// controllers/apiController.js
+// DO I NEED THIS PAGE?
+//controllers/apiController.js
 function index(req, res) {
   res.json({
     message: 'Welcome to Stacies European Vacations!',
@@ -12,7 +13,7 @@ function index(req, res) {
   });
 }
 
-//research endpoints. Our endpoints needed are GET and POST.
+//research endpoints.  Endpoints needed are GET and POST.
 
 module.exports = {
   index: index

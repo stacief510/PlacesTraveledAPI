@@ -24,7 +24,7 @@ function index(req, res) {
   db.Place.find({}, function(err, place){
             
               if (err){
-                return console.log('failed because you suck.');
+                return console.log('failed.');
               }
               res.json(place);
               });

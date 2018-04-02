@@ -37,6 +37,9 @@ $('#place-form').on('submit', function(event){
 
 function postSuccess(place){
 	renderCountry(place);
+	// if (place.photos == ''){
+	// 	place.photos = "./images/default.png"
+	// }
 }
 
 // var placeList = [{
